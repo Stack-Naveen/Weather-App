@@ -59,8 +59,9 @@ html {
 }
 
 .search-bar button:hover {
-  /* background: #e51313; */
-  border-color: #646cff;
+  background: #333;
+  color: white;
+  transform: scale(1.05);
 }
 
 .weather-info .city {
@@ -108,10 +109,31 @@ html {
   margin-top: 4px;
 }
 
+.error {
+  color: red;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
 @media (max-width: 480px) {
   .weather-card {
     padding: 16px;
-    max-width: 90%;
+    max-width: 95%;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .search-bar button {
+    width: 100%;
   }
 
   .weather-info .temp {

@@ -7,6 +7,8 @@ export default function Weather() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const apiKey = "e34b4c51d8c2b7bf48d5217fe52ff79e";
+
   async function fetchUrl(cityName) {
     if (!cityName) {
       setError("Please enter a city name");
@@ -18,7 +20,7 @@ export default function Weather() {
 
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=e34b4c51d8c2b7bf48d5217fe52ff79e&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`
       );
 
       if (!response.ok) {
@@ -36,7 +38,7 @@ export default function Weather() {
   }
 
   useEffect(() => {
-    fetchUrl("bengaluru");
+    fetchUrl("vijayawada");
   }, []);
 
   function currentDate() {
