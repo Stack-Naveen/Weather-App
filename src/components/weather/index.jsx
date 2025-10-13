@@ -7,7 +7,7 @@ export default function Weather() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const apiKey = "e34b4c51d8c2b7bf48d5217fe52ff79e";
+  const apiKey = "e68c68897e860c4de633b0b34dad1594";
 
   async function fetchUrl(cityName) {
     if (!cityName) {
